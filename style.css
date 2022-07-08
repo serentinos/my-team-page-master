@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 5rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+.header__title {
+  font-family: "PT Serif", serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+.header__desc {
+  width: 50%;
+}
+.header__desc__header {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.header__desc__info {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.pictures-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 100px;
+  row-gap: 50px;
+  margin-bottom: 5rem;
+}
+
+.photo {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.team-name {
+  font-weight: 600;
+  font-size: 18px;
+}
+.team-place {
+  font-family: "PT Serif", serif;
+  text-transform: uppercase;
+  width: 200px;
+  font-size: 12px;
+  font-weight: 400;
+  transform: rotate(90deg);
+  position: absolute;
+  top: 91px;
+  right: -115px;
+}
+
+.img-section {
+  position: relative;
+}
+/* додає першому 2 і далі кожному третьому елементу margin шоб вони опустились трішки нижче */
+.img-section:nth-child(3n - 1) {
+  margin-top: 80px;
+}
+.footer {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 14px;
+  color: #a9a9a9;
+  margin-bottom: 2rem;
+}
+
+.footer-desc {
+  text-align: center;
+}
+@media only screen and (max-width: 1100px) {
+  .container {
+    max-width: 700px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .container {
+    padding: 30px 30px;
+  }
+  .header {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .header__desc {
+    width: 100%;
+  }
+  .pictures-section {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 15px;
+  }
+  /* обнулення минулих margins */
+  .img-section:nth-child(3n - 1) {
+    margin-top: 0;
+  }
+  /* застосування нових margin на кожен другий елемент */
+  .img-section:nth-child(2n) {
+    margin-top: 80px;
+  }
+}
